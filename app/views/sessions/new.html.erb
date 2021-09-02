@@ -1,0 +1,15 @@
+
+<%= form_for @user, url: login_path, method: :post do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+
+    <%= f.submit "log in" %> OR <%= link_to(controller: 'users', action: 'new') { 'sign up' } %>
+<% end %>
+
+
+<!--I dont need a create.html.erb in here because this takes the place of both new and create-->
+<!--I have a label for name and password with a log in button-->
+<!--There is an option to sign up which routes to the new user controller -->

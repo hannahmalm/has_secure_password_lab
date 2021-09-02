@@ -1,0 +1,14 @@
+<%= form_for @user, controller: 'users', action: 'create' do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+<!--Notice here that it is a PASSWORD FIELD not a text_field-->
+    <%= f.label :password_conformation %>
+    <%= f.password_field :password_conformation %>
+
+    <%= f.submit "create" %>
+<% end %>
